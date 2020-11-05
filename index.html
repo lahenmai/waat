@@ -1,0 +1,45 @@
+<html>
+
+<head>
+	<title>Presentation</title>
+	<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-168258233-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-168258233-1');
+</script>
+
+<script>
+function searchTerm() {
+    var input = document.getElementById("userInput").value;
+	var url = "search/"
+	var res = url.concat(input);
+	window.location.replace(res);
+	alert(res);
+}
+</script>
+</head>
+
+<body>
+	<h2>Welcome!</h2>
+	
+	<h3>This is start page</h2>
+	
+	<a href="pages/one.html">Click here to go to page One</a><br><br>
+	<a href="pages/two.html">Click here to go to page Two</a><br><br>
+	
+	<!-- Site search !-->
+	<form action="search_query.html">
+	<input type = "text" name="q">
+	<input type="submit" value="Search With Query Parameters">
+	</form>
+
+	<form action="/search/" method="get">
+	<input id="userInput" type = "text" name="q">
+	<button onclick="searchTerm()">Search Information with URL</button>
+	</form>
+</body>
+</html>
